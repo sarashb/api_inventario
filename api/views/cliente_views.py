@@ -55,7 +55,7 @@ class ClienteDetail(Resource):
             cpf = request.json["cpf"]
             email = request.json["email"]
             telefone = request.json["telefone"]
-            endereco = request.json["endereco"]
+            endereco = request.json["endereco_id"]
             endereco_cliente = endereco_service.listar_endereco_id(endereco)
             if endereco_cliente is None:
                 return make_response(jsonify("Endereço nao foi encontrado."), 404)
